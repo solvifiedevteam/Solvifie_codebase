@@ -85,8 +85,9 @@ export const metadata: Metadata = {
     canonical: "https://solvifie.com",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: "/logo.jpeg",
+    shortcut: "/logo.jpeg",
+    apple: "/logo.jpeg",
   },
 };
 

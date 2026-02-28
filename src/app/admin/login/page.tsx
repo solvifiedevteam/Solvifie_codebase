@@ -99,7 +99,7 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Image
-            src="/Solvifie_logo1.png"
+            src="/logo.jpeg"
             alt="Solvifie"
             width={160}
             height={48}
