@@ -3,26 +3,34 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
-import { Lock, Mail, Eye, EyeOff, AlertCircle } from 'lucide-react';
+import { Lock, Mail, Eye, EyeOff, AlertCircle, CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 
 type FormState = 'idle' | 'submitting';
+type Tab = 'signin' | 'signup';
 
 const MAX_ATTEMPTS = 5;
-const LOCKOUT_MS = 60 * 1000; // 60 seconds
+const LOCKOUT_MS = 60 * 1000;
 
 export default function AdminLoginPage() {
   const router = useRouter();
+  const [tab, setTab] = useState<Tab>('signin');
   const [formState, setFormState] = useState<FormState>('idle');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [form, setForm] = useState({ email: '', password: '' });
   const [attempts, setAttempts] = useState(0);
   const [lockedUntil, setLockedUntil] = useState<number | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const resetMessages = () => {
     setError('');
+    setSuccess('');
+  };
+
+  const handleSignIn = async (e: React.FormEvent) => {
+    e.preventDefault();
+    resetMessages();
 
     const now = Date.now();
     if (lockedUntil && now < lockedUntil) {
@@ -57,6 +65,35 @@ export default function AdminLoginPage() {
     router.refresh();
   };
 
+  const handleSignUp = async (e: React.FormEvent) => {
+    e.preventDefault();
+    resetMessages();
+
+    if (form.password.length < 6) {
+      setError('Password must be at least 6 characters.');
+      return;
+    }
+
+    setFormState('submitting');
+
+    const supabase = createClient();
+    const { error: authError } = await supabase.auth.signUp({
+      email: form.email,
+      password: form.password,
+    });
+
+    if (authError) {
+      setError(authError.message);
+      setFormState('idle');
+      return;
+    }
+
+    setSuccess('Account created successfully! You can now sign in.');
+    setForm({ email: '', password: '' });
+    setFormState('idle');
+    setTimeout(() => setTab('signin'), 2000);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
@@ -72,19 +109,54 @@ export default function AdminLoginPage() {
             Admin Portal
           </h1>
           <p className="text-gray-500 text-sm mt-1">
-            Sign in to manage jobs and applications
+            {tab === 'signin'
+              ? 'Sign in to manage jobs and applications'
+              : 'Create your admin account'}
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+          {/* Tabs */}
+          <div className="flex mb-6 bg-gray-100 rounded-xl p-1">
+            <button
+              type="button"
+              onClick={() => { setTab('signin'); resetMessages(); }}
+              className={`flex-1 py-2.5 text-sm font-semibold rounded-lg transition-all ${
+                tab === 'signin'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              Sign In
+            </button>
+            <button
+              type="button"
+              onClick={() => { setTab('signup'); resetMessages(); }}
+              className={`flex-1 py-2.5 text-sm font-semibold rounded-lg transition-all ${
+                tab === 'signup'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              Sign Up
+            </button>
+          </div>
+
           {error && (
             <div className="flex items-center gap-2 text-red-600 bg-red-50 px-4 py-3 rounded-xl text-sm mb-6">
-              <AlertCircle size={16} />
+              <AlertCircle size={16} className="shrink-0" />
               {error}
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+          {success && (
+            <div className="flex items-center gap-2 text-green-600 bg-green-50 px-4 py-3 rounded-xl text-sm mb-6">
+              <CheckCircle2 size={16} className="shrink-0" />
+              {success}
+            </div>
+          )}
+
+          <form onSubmit={tab === 'signin' ? handleSignIn : handleSignUp} className="space-y-5">
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">
                 Email
@@ -123,7 +195,7 @@ export default function AdminLoginPage() {
                   onChange={(e) =>
                     setForm((f) => ({ ...f, password: e.target.value }))
                   }
-                  placeholder="Enter your password"
+                  placeholder={tab === 'signup' ? 'Min. 6 characters' : 'Enter your password'}
                   className="w-full pl-11 pr-11 py-3.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all"
                 />
                 <button
@@ -144,10 +216,10 @@ export default function AdminLoginPage() {
               {formState === 'submitting' ? (
                 <span className="flex items-center justify-center gap-2">
                   <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  Signing in...
+                  {tab === 'signin' ? 'Signing in...' : 'Creating account...'}
                 </span>
               ) : (
-                'Sign In'
+                tab === 'signin' ? 'Sign In' : 'Create Account'
               )}
             </button>
           </form>
