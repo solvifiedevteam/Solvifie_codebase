@@ -2,14 +2,15 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, Phone, Calendar, MessageSquare } from 'lucide-react';
+import { CheckCircle2, Phone, Calendar } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const WhySolvifie = () => {
     const points = [
-        { title: 'Chennai-based expertise', desc: 'Deep roots in the local market and talent pool.' },
-        { title: 'Small Team. High Impact.', desc: 'Dedicated focus on your specific requirements.' },
-        { title: 'Culture-Fit Hiring', desc: 'Focusing on values that align with your company.' },
-        { title: 'Scalable Development Solutions', desc: 'Helping you grow without the growing pains.' },
+        { title: 'Verified & Quality Profiles', desc: 'We share only carefully screened and relevant candidates. Every profile is checked before submission.' },
+        { title: 'Faster Hiring Process', desc: 'We reduce hiring time by delivering suitable candidates quickly — so your operations never slow down.' },
+        { title: 'Clear & Transparent Communication', desc: 'We keep you updated at every stage with simple, structured communication.' },
+        { title: 'Complete Recruitment Support', desc: 'From sourcing to final selection, we manage the entire hiring cycle efficiently.' },
     ];
 
     return (
@@ -22,7 +23,7 @@ const WhySolvifie = () => {
                         viewport={{ once: true }}
                         className="flex-1"
                     >
-                        <h2 className="text-4xl font-bold text-gray-900 mb-8">Why Chennai Businesses Trust Us</h2>
+                        <h2 className="text-4xl font-bold text-gray-900 mb-8">Why Choose Solvifie?</h2>
                         <div className="space-y-6">
                             {points.map((p, idx) => (
                                 <div key={idx} className="flex items-start gap-4">
@@ -95,7 +96,7 @@ export const BookingSection = () => {
 
                     <div className="flex gap-4">
                         <motion.a
-                            href="tel:+917010264814"
+                            href="tel:+918248020159"
                             whileHover={{ scale: 1.1 }}
                             className="p-5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 transition-all text-white shadow-xl"
                             title="Call Us"
@@ -103,14 +104,14 @@ export const BookingSection = () => {
                             <Phone />
                         </motion.a>
                         <motion.a
-                            href="https://wa.me/917010264814"
+                            href="https://wa.me/918248020159"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.1 }}
                             className="p-5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 transition-all text-white shadow-xl"
                             title="WhatsApp"
                         >
-                            <MessageSquare />
+                            <WhatsAppIcon size={24} />
                         </motion.a>
                     </div>
                 </div>

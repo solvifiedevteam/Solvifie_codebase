@@ -4,11 +4,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const partners = [
-    { name: 'TechCorp', logo: 'TC' },
-    { name: 'Innova', logo: 'IN' },
-    { name: 'BuildRight', logo: 'BR' },
-    { name: 'DataFlow', logo: 'DF' },
-    { name: 'ChennaiSoft', logo: 'CS' },
+    { name: 'Spinny', logo: 'SP' },
+    { name: 'Walkin Tree', logo: 'WT' },
+    { name: 'Hurix Digital', logo: 'HD' },
+    { name: 'Awakin India', logo: 'AI' },
 ];
 
 const Partners = () => {

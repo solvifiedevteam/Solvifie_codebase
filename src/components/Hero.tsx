@@ -2,90 +2,182 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MessageCircle, Calendar } from 'lucide-react';
+import { Phone, Calendar, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
+
+const trustBadges = [
+    { label: '8+ Years Experience' },
+    { label: '500+ Placements' },
+    { label: '200+ Client Companies' },
+    { label: 'Pan-India Reach' },
+];
+
+const industries = ['IT & Tech', 'Finance', 'Healthcare', 'Manufacturing', 'Retail'];
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            {/* Background Gradient Animation */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary via-indigo-600 to-violet-700 opacity-90"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)] animate-pulse"></div>
+        <section
+            aria-label="Hero — Solvifie Consultancy"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+        >
+            {/* Background Video */}
+            <div className="absolute inset-0 z-0 overflow-hidden">
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    src="/herobg_video.mp4"
+                />
+                {/* Multi-layer overlay for sharp text contrast */}
+                {/* Base dark layer */}
+                <div className="absolute inset-0 bg-black/55" />
+                {/* Blue brand tint */}
+                <div className="absolute inset-0 bg-primary/25" />
+                {/* Bottom-to-top gradient to anchor content */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+                {/* Subtle vignette on sides */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
             </div>
 
-            {/* Floating Geometric Shapes (Anti-Gravity) */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <motion.div
-                    className="absolute top-1/4 left-1/10 w-32 h-32 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 animate-float"
-                    initial={{ y: 0, rotate: 0 }}
-                />
-                <motion.div
-                    className="absolute top-1/3 right-1/4 w-48 h-48 bg-white/5 rounded-full backdrop-blur-md border border-white/10 animate-float-delayed"
-                />
-                <motion.div
-                    className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-white/10 rounded-full border border-white/20 animate-float"
-                />
-                <motion.div
-                    className="absolute top-1/2 right-10 w-16 h-16 bg-white/5 rounded-lg rotate-45 border border-white/10 animate-float-delayed"
-                />
-            </div>
+            {/* Main content */}
+            <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-20">
 
-            {/* Hero Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                {/* Trust badge strip */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: -12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-wrap justify-center gap-2 mb-10"
                 >
-                    <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
-                        Building Teams. <br />
-                        <span className="text-white/80">Powering Growth.</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-blue-50">
-                        Chennai's premier Recruitment & Development Consultancy providing scalable talent acquisition and workforce solutions for modern businesses.
-                    </p>
+                    {trustBadges.map((badge) => (
+                        <span
+                            key={badge.label}
+                            className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full"
+                        >
+                            <CheckCircle size={13} className="text-emerald-400 shrink-0" />
+                            {badge.label}
+                        </span>
+                    ))}
+                </motion.div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <motion.a
-                            href="tel:+917010264814"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="w-full sm:w-auto bg-white text-primary px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:bg-blue-50 transition-all shadow-xl"
-                        >
-                            <Phone size={20} />
-                            Call Now
-                        </motion.a>
-                        <motion.a
-                            href="https://wa.me/917010264814"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="w-full sm:w-auto bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:bg-green-600 transition-all shadow-xl"
-                        >
-                            <MessageCircle size={20} />
-                            WhatsApp
-                        </motion.a>
-                        <motion.a
-                            href="#booking"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="w-full sm:w-auto bg-primary border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:bg-white/10 transition-all shadow-xl"
-                        >
-                            <Calendar size={20} />
-                            Book Consultation
-                        </motion.a>
-                    </div>
+                {/* Headline */}
+                <motion.h1
+                    initial={{ opacity: 0, y: 28 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.1 }}
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-5"
+                >
+                    Hiring. Simplified.{' '}
+                    <br className="hidden sm:block" />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-sky-200 to-violet-300">
+                        Delivered.
+                    </span>
+                </motion.h1>
+
+                {/* Sub-headline */}
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.22 }}
+                    className="lead text-blue-100 font-medium max-w-2xl mx-auto mb-3"
+                >
+                    Your trusted Recruitment &amp; Talent Acquisition Partner
+                </motion.p>
+                <motion.p
+                    initial={{ opacity: 0, y: 18 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.32 }}
+                    className="text-base md:text-lg text-blue-200/80 max-w-xl mx-auto mb-10"
+                >
+                    We make hiring effortless by delivering skilled, pre-screened, and job-ready candidates — exactly when you need them.
+                </motion.p>
+
+                {/* CTA buttons */}
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.42 }}
+                    className="flex flex-col sm:flex-row gap-3 justify-center items-center"
+                >
+                    <motion.a
+                        href="#booking"
+                        whileHover={{ scale: 1.04 }}
+                        whileTap={{ scale: 0.96 }}
+                        className="btn w-full sm:w-auto px-7 py-3 text-sm font-bold rounded-xl bg-white text-primary hover:bg-blue-50 shadow-lg shadow-black/20 flex items-center gap-2"
+                    >
+                        <Calendar size={17} />
+                        Book Free Consultation
+                    </motion.a>
+                    <motion.a
+                        href="https://wa.me/918248020159"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.04 }}
+                        whileTap={{ scale: 0.96 }}
+                        className="btn w-full sm:w-auto px-7 py-3 text-sm font-bold rounded-xl shadow-lg shadow-black/20 flex items-center gap-2"
+                        style={{ background: '#25D366', color: '#fff' }}
+                    >
+                        <WhatsAppIcon size={17} />
+                        WhatsApp Us
+                    </motion.a>
+                    <motion.a
+                        href="tel:+918248020159"
+                        whileHover={{ scale: 1.04 }}
+                        whileTap={{ scale: 0.96 }}
+                        className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm font-medium py-3 px-2"
+                        aria-label="Call Solvifie Consultancy"
+                    >
+                        <Phone size={15} />
+                        +91 8248 020159
+                    </motion.a>
+                </motion.div>
+
+                {/* Social proof strip */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.7 }}
+                    className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-white/55 text-sm"
+                >
+                    <span className="flex items-center gap-2 font-medium">
+                        <span className="flex">
+                            {[...Array(5)].map((_, i) => (
+                                <Star key={i} size={13} className="text-yellow-400 fill-yellow-400" />
+                            ))}
+                        </span>
+                        Rated 5/5 by 100+ clients
+                    </span>
+                    <span className="hidden sm:block w-px h-4 bg-white/20" />
+                    <span className="flex flex-wrap justify-center gap-2">
+                        {industries.map((ind, i) => (
+                            <React.Fragment key={ind}>
+                                {i > 0 && <span className="text-white/20">·</span>}
+                                <span>{ind}</span>
+                            </React.Fragment>
+                        ))}
+                    </span>
+                    <span className="hidden sm:block w-px h-4 bg-white/20" />
+                    <a
+                        href="/services"
+                        className="inline-flex items-center gap-1 text-blue-300 hover:text-white transition-colors font-semibold"
+                    >
+                        View all services <ArrowRight size={13} />
+                    </a>
                 </motion.div>
             </div>
 
-            {/* Scroll Indicator */}
+            {/* Scroll indicator */}
             <motion.div
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-white/50"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-white/35"
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                aria-hidden="true"
             >
-                <div className="w-1 h-12 rounded-full bg-gradient-to-b from-white to-transparent opacity-50"></div>
+                <span className="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
+                <div className="w-px h-8 rounded-full bg-gradient-to-b from-white/50 to-transparent" />
             </motion.div>
         </section>
     );
