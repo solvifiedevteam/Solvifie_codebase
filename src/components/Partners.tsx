@@ -1,50 +1,42 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
-
 const partners = [
-    { name: 'Spinny', logo: 'SP' },
-    { name: 'Walkin Tree', logo: 'WT' },
-    { name: 'Hurix Digital', logo: 'HD' },
-    { name: 'Awakin India', logo: 'AI' },
+  { name: 'Spinny' },
+  { name: 'Walkin Tree' },
+  { name: 'Hurix Digital' },
+  { name: 'Awakin India' },
+  { name: 'Octaware Gulf' },
+  { name: 'Spinny' },
+  { name: 'Walkin Tree' },
+  { name: 'Hurix Digital' },
+  { name: 'Awakin India' },
+  { name: 'Octaware Gulf' },
 ];
 
 const Partners = () => {
-    return (
-        <section className="py-16 bg-white border-y border-gray-100 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-10"
-                >
-                    Trusted by Leading Organizations in Chennai
-                </motion.p>
-                <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
-                    {partners.map((partner, idx) => (
-                        <motion.div
-                            key={partner.name}
-                            initial={{ opacity: 0, filter: 'grayscale(100%)' }}
-                            whileInView={{ opacity: 0.5, filter: 'grayscale(100%)' }}
-                            whileHover={{ opacity: 1, filter: 'grayscale(0%)' }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="flex items-center gap-3 cursor-pointer group"
-                        >
-                            <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center font-black text-gray-400 group-hover:bg-primary/10 group-hover:text-primary transition-all">
-                                {partner.logo}
-                            </div>
-                            <span className="text-xl font-bold text-gray-400 group-hover:text-gray-900 transition-all">
-                                {partner.name}
-                            </span>
-                        </motion.div>
-                    ))}
-                </div>
+  return (
+    <section className="py-14 bg-white border-y border-gray-100 overflow-hidden">
+      <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-10">
+        Trusted by Leading Organizations
+      </p>
+
+      {/* Marquee track */}
+      <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+        <div className="flex gap-10 animate-marquee whitespace-nowrap">
+          {[...partners, ...partners].map((p, i) => (
+            <div
+              key={i}
+              className="flex items-center px-6 py-3 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-300 cursor-default group"
+            >
+              <span className="text-base font-bold text-gray-500 group-hover:text-gray-800 transition-colors whitespace-nowrap font-heading">
+                {p.name}
+              </span>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Partners;

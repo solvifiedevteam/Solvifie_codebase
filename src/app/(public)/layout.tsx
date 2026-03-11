@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppChatbot from "@/components/WhatsAppChatbot";
 
 export default function PublicLayout({
   children,
@@ -11,6 +12,7 @@ export default function PublicLayout({
       <Navbar />
       <main id="main-content">{children}</main>
       <Footer />
+      <WhatsAppChatbot />
     </>
   );
 }

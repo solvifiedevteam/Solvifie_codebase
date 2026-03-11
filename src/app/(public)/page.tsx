@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
+import ImpactStats from "@/components/ImpactStats";
 import ServicesOverview from "@/components/ServicesOverview";
 import Testimonials from "@/components/Testimonials";
 import WhySolvifie, { BookingSection } from "@/components/WhySolvifie";
@@ -202,6 +203,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
       <Hero />
+      <ImpactStats />
       <Partners />
       <StatsSection />
       <ServicesOverview />
