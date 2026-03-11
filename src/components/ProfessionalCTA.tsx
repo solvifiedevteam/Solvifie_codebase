@@ -82,7 +82,7 @@ const ProfessionalCTA = () => {
                             whileTap={{ scale: 0.95 }}
                             className="bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all"
                         >
-                            📞 +91 7010 264814
+                            📞 +91 8248020159
                         </motion.a>
                         <motion.a
                             href="https://wa.me/918248020159"

@@ -52,7 +52,7 @@ export default function WhatsAppChatbot() {
           <div className="p-4 bg-[#f0f4f8]">
             <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm max-w-[90%]">
               <p className="text-gray-800 text-sm font-sans leading-relaxed">
-                👋 Hi there! Welcome to <span className="font-semibold">Solvifie Consultancy</span>.
+                👋 Hi there! Welcome to <span className="font-semibold">Solvifie</span>.
               </p>
               <p className="text-gray-600 text-sm font-sans mt-1 leading-relaxed">
                 Looking to hire top talent or find your dream job? We're here to help!

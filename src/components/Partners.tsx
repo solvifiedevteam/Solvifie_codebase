@@ -1,16 +1,13 @@
 'use client';
 
+import Image from 'next/image';
+
 const partners = [
-  { name: 'Spinny' },
-  { name: 'Walkin Tree' },
-  { name: 'Hurix Digital' },
-  { name: 'Awakin India' },
-  { name: 'Octaware Gulf' },
-  { name: 'Spinny' },
-  { name: 'Walkin Tree' },
-  { name: 'Hurix Digital' },
-  { name: 'Awakin India' },
-  { name: 'Octaware Gulf' },
+  { name: 'Spinny', logo: '/Solvifie_partner_logo/spinny_logo.webp', w: 'w-32', h: 'h-14' },
+  { name: 'Walkin Tree', logo: '/Solvifie_partner_logo/walking_tree_logo.webp', w: 'w-36', h: 'h-16' },
+  { name: 'Hurix Digital', logo: '/Solvifie_partner_logo/hurix_logo.webp', w: 'w-36', h: 'h-12' },
+  { name: 'Awakin India', logo: '/Solvifie_partner_logo/awakenindia_logo.webp', w: 'w-32', h: 'h-16' },
+  { name: 'Octaware Gulf', logo: '/Solvifie_partner_logo/octaware_logo.webp', w: 'w-40', h: 'h-12' },
 ];
 
 const Partners = () => {
@@ -23,14 +20,15 @@ const Partners = () => {
       {/* Marquee track */}
       <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
         <div className="flex gap-10 animate-marquee whitespace-nowrap">
-          {[...partners, ...partners].map((p, i) => (
-            <div
-              key={i}
-              className="flex items-center px-6 py-3 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-300 cursor-default group"
-            >
-              <span className="text-base font-bold text-gray-500 group-hover:text-gray-800 transition-colors whitespace-nowrap font-heading">
-                {p.name}
-              </span>
+          {[...partners, ...partners, ...partners].map((p, i) => (
+            <div key={i} className={`relative shrink-0 ${p.h} ${p.w}`}>
+              <Image
+                src={p.logo}
+                alt={p.name}
+                fill
+                className="object-contain"
+                sizes="160px"
+              />
             </div>
           ))}
         </div>

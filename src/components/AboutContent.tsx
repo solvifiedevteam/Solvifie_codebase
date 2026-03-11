@@ -228,9 +228,9 @@ export default function AboutContent() {
             transition={{ duration: 0.65, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.06] mb-6"
           >
-            Building Chennai&apos;s Most{' '}
+            One Recruitment Partner for{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-sky-200 to-violet-300">
-              Trusted Recruitment Partner
+              Pan India, Gulf, UK & US Hiring.
             </span>
           </motion.h1>
 
@@ -240,8 +240,7 @@ export default function AboutContent() {
             transition={{ duration: 0.6, delay: 0.22 }}
             className="text-lg md:text-xl text-blue-100/85 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            For over 8 years, Solvifie Consultancy has connected exceptional talent with
-            visionary organisations — fuelling growth across Chennai, Tamil Nadu, and beyond.
+            From Chennai to every corner of India, the Gulf, and the US — Solvifie connects exceptional talent with visionary organisations across borders, industries, and time zones.
           </motion.p>
 
           <motion.div
