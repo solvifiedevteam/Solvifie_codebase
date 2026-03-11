@@ -241,6 +241,18 @@ const Footer = () => {
             <p className="text-xs text-gray-600">
               GST: 33DLVPA4521B1ZJ
             </p>
+            <span className="hidden sm:block w-px h-3 bg-white/10" />
+            <p className="text-xs text-gray-600">
+              Designed by{' '}
+              <a
+                href="https://siruailabs.pages.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
+                Siru AI Labs
+              </a>
+            </p>
           </div>
           <div className="flex items-center gap-6 order-1 sm:order-2">
             <Link
