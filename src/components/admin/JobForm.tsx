@@ -47,6 +47,18 @@ export default function JobForm({
           />
         </div>
 
+        <div className="md:col-span-2">
+          <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">
+            Client Name
+          </label>
+          <input
+            name="client_name"
+            defaultValue={job?.client_name || ''}
+            placeholder="e.g. Infosys, TCS, Startup Inc."
+            className="w-full px-5 py-3.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all"
+          />
+        </div>
+
         <div>
           <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">
             Location *

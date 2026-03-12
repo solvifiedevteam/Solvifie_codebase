@@ -26,6 +26,7 @@ export async function createJob(formData: FormData) {
   const { error } = await supabase.from('jobs').insert({
     title,
     slug,
+    client_name: (formData.get('client_name') as string)?.trim() || null,
     location: (formData.get('location') as string).trim(),
     experience: (formData.get('experience') as string).trim(),
     salary: (formData.get('salary') as string)?.trim() || null,
@@ -54,6 +55,7 @@ export async function updateJob(id: string, formData: FormData) {
     .from('jobs')
     .update({
       title: (formData.get('title') as string).trim(),
+      client_name: (formData.get('client_name') as string)?.trim() || null,
       location: (formData.get('location') as string).trim(),
       experience: (formData.get('experience') as string).trim(),
       salary: (formData.get('salary') as string)?.trim() || null,

@@ -6,6 +6,7 @@ export interface Job {
   id: string;
   title: string;
   slug: string;
+  client_name: string | null;
   location: string;
   experience: string;
   salary: string | null;
