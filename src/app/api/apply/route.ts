@@ -8,7 +8,7 @@ import { getClientIp } from '@/lib/utils/getClientIp';
 
 // Simple in-memory rate limiting (resets on cold start)
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
-export const _rateLimitMap = rateLimit; // exported for test resets only
+// not exported — Next.js route files only allow HTTP handler exports
 
 export async function POST(request: NextRequest) {
   // Rate limiting: 3 applications per IP per hour
