@@ -6,7 +6,7 @@ import { Phone, Calendar, CheckCircle, Star, ArrowRight } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 const trustBadges = [
-    { label: '8+ Years Experience' },
+    { label: '4+ Years Experience' },
     { label: '500+ Placements' },
     { label: '200+ Client Companies' },
     { label: 'Pan-India Reach' },
