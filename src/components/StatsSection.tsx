@@ -8,7 +8,7 @@ import WhatsAppIcon from './WhatsAppIcon';
 const stats = [
     { icon: <TrendingUp className="text-white" size={32} />, number: "500+", label: "Successful Placements", color: "bg-blue-600" },
     { icon: <Users className="text-white" size={32} />, number: "200+", label: "Client Companies", color: "bg-purple-600" },
-    { icon: <Award className="text-white" size={32} />, number: "8+", label: "Years Experience", color: "bg-indigo-600" },
+    { icon: <Award className="text-white" size={32} />, number: "4+", label: "Years Experience", color: "bg-indigo-600" },
     { icon: <Clock className="text-white" size={32} />, number: "48H", label: "Average Response Time", color: "bg-violet-600" },
 ];
 
@@ -32,9 +32,9 @@ const StatsSection = () => {
         <section className="py-24 bg-gradient-to-r from-gray-50 to-blue-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Solvifie?</h2>
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Impact in Numbers</h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Trusted by leading companies across India with proven expertise in recruitment and talent development.
+                        Real results that reflect our commitment to connecting talent with opportunity across India.
                     </p>
                 </div>
 
@@ -87,7 +87,7 @@ const StatsSection = () => {
                     >
                         <h3 className="text-2xl font-bold text-gray-900 mb-6">Ready to Find Your Perfect Match?</h3>
                         <p className="text-gray-600 mb-8 leading-relaxed">
-                            Whether you're looking to hire top talent or advance your career, Solvifie Consultancy has 8+ years of proven expertise in connecting the right people with the right opportunities.
+                            Whether you're looking to hire top talent or advance your career, Solvifie Consultancy has 4+ years of proven expertise in connecting the right people with the right opportunities.
                         </p>
                         <div className="space-y-3">
                             <a
