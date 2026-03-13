@@ -104,8 +104,8 @@ const Footer = () => {
               <span className="text-2xl font-bold tracking-tight">Solvifie</span>
             </div>
             <p className="text-gray-400 leading-relaxed text-sm max-w-xs">
-              Chennai&apos;s trusted Recruitment & HR Consultancy — connecting
-              high-potential talent with visionary organisations for over 8 years.
+              Chennai&apos;s trusted Recruitment & HR Consultancy connecting
+              high-potential talent with visionary organisations for over 4 years.
             </p>
 
             {/* Contact Pills */}
