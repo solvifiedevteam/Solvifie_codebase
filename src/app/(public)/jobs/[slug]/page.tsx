@@ -39,7 +39,7 @@ export async function generateMetadata({
       type: 'website',
       images: [
         {
-          url: '/og-image.png',
+          url: '/opengraph-image',
           width: 1200,
           height: 630,
           alt: `${job.title} at Solvifie Consultancy`,
@@ -129,7 +129,7 @@ export default async function JobPage({
       '@type': 'Organization',
       name: 'Solvifie Consultancy',
       sameAs: 'https://solvifie.com',
-      logo: 'https://solvifie.com/logo.jpeg',
+      logo: 'https://solvifie.com/logo.png',
     },
     ...(job.salary && {
       baseSalary: {

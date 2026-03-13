@@ -27,7 +27,7 @@ import WhatsAppIcon from './WhatsAppIcon';
 const stats = [
   { number: '500+', label: 'Successful Placements', icon: TrendingUp },
   { number: '200+', label: 'Client Companies', icon: Briefcase },
-  { number: '8+', label: 'Years of Expertise', icon: Award },
+  { number: '4+', label: 'Years of Expertise', icon: Award },
   { number: '48h', label: 'Avg. Response Time', icon: Clock },
 ];
 
@@ -98,7 +98,7 @@ const faqs = [
   {
     question: 'What makes Solvifie different from other recruitment firms in Chennai?',
     answer:
-      'Solvifie combines deep local market expertise with global recruitment standards. We offer personalised solutions, rigorous cultural-fit assessments, and post-placement support — ensuring long-term success for both employers and candidates. Our consultants are industry veterans with 8+ years of hands-on experience in the Chennai market.',
+      'Solvifie combines deep local market expertise with global recruitment standards. We offer personalised solutions, rigorous cultural-fit assessments, and post-placement support — ensuring long-term success for both employers and candidates. Our consultants are industry veterans with 4+ years of hands-on experience in the Chennai market.',
   },
   {
     question: 'Do you serve both employers and job seekers?',

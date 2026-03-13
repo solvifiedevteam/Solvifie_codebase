@@ -86,7 +86,7 @@ export default async function BlogArticlePage({
       name: 'Solvifie Consultancy',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://solvifie.com/logo.jpeg',
+        url: 'https://solvifie.com/logo.png',
       },
     },
     mainEntityOfPage: {

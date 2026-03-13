@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'Contact Solvifie Consultancy — Chennai HR & Recruitment Experts',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'Contact Solvifie Consultancy | Free HR Consultation in Chennai',
     description:
       'Call, WhatsApp, or email Chennai\'s leading recruitment & HR firm. Free consultation available.',
-    images: ['/og-image.png'],
+    images: ['/opengraph-image'],
   },
 };
 
@@ -51,9 +51,9 @@ const localBusinessSchema = {
   name: 'Solvifie Consultancy',
   url: 'https://solvifie.com',
   logo: 'https://solvifie.com/logo.png',
-  image: 'https://solvifie.com/og-image.png',
+  image: 'https://solvifie.com/opengraph-image',
   description:
-    "Chennai's leading Recruitment & HR Consulting firm with 8+ years of expertise in talent acquisition, executive hiring, contract staffing, and workforce planning.",
+    "Chennai's leading Recruitment & HR Consulting firm with 4+ years of expertise in talent acquisition, executive hiring, contract staffing, and workforce planning.",
   telephone: '+918248020159',
   email: 'business@solvifie.com',
   address: {

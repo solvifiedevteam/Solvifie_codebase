@@ -408,7 +408,7 @@ export default function ServicesContent() {
             className="text-lg md:text-xl text-blue-100/85 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             Whether you&apos;re scaling a team or advancing your career, Solvifie has a tailored
-            solution for you — backed by 8+ years of expertise in Chennai&apos;s talent market.
+            solution for you — backed by 4+ years of expertise in Chennai&apos;s talent market.
           </motion.p>
 
           {/* Audience toggle */}
@@ -695,7 +695,7 @@ export default function ServicesContent() {
                 </a>
               </div>
               <p className="text-blue-200/50 text-sm mt-8">
-                Response within 24 hours · 8+ years of proven expertise
+                Response within 24 hours · 4+ years of proven expertise
               </p>
             </div>
           </motion.div>

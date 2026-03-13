@@ -3,32 +3,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
-import Image from 'next/image';
 
 const testimonials = [
     {
-        name: 'Anish Shravan',
+        name: 'Anish S.',
         role: 'HR Director',
-        company: 'TechCorp Solutions',
+        industry: 'IT Services',
         content: "Solvifie helped us scale our engineering team significantly. Their understanding of culture-fit is unparalleled in Chennai.",
         rating: 5,
-        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop'
+        initials: 'AS',
+        color: 'bg-blue-600',
     },
     {
-        name: 'Priya Mani',
+        name: 'Priya M.',
         role: 'Product Manager',
-        company: 'Innovate Hub',
+        industry: 'SaaS',
         content: "Professional and efficient. They didn't just find me a job; they found me the right career path. Highly recommended for candidates.",
         rating: 5,
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop'
+        initials: 'PM',
+        color: 'bg-purple-600',
     },
     {
-        name: 'Rajesh Kumar',
+        name: 'Rajesh K.',
         role: 'Founder',
-        company: 'BuildRight Ventures',
+        industry: 'Technology',
         content: "Excellent service and great follow-up. Solvifie understands the dynamic needs of Chennai startups.",
         rating: 5,
-        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop'
+        initials: 'RK',
+        color: 'bg-indigo-600',
     }
 ];
 
@@ -59,19 +61,15 @@ const Testimonials = () => {
                                 ))}
                             </div>
 
-                            <p className="text-gray-700 italic mb-8 relative z-10">"{t.content}"</p>
+                            <p className="text-gray-700 italic mb-8 relative z-10">&quot;{t.content}&quot;</p>
 
                             <div className="flex items-center gap-4">
-                                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-primary">
-                                    <img
-                                        src={t.image}
-                                        alt={t.name}
-                                        className="object-cover w-full h-full"
-                                    />
+                                <div className={`w-12 h-12 rounded-full ${t.color} flex items-center justify-center text-white font-bold text-sm`}>
+                                    {t.initials}
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-gray-900">{t.name}</h4>
-                                    <p className="text-sm text-gray-500">{t.role} @ {t.company}</p>
+                                    <p className="text-sm text-gray-500">{t.role} · {t.industry}</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -83,3 +81,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+

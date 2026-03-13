@@ -4,7 +4,7 @@ import { createServerClient } from '@supabase/ssr';
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 
-export async function proxy(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const response = NextResponse.next({ request });
 
   const supabase = createServerClient(

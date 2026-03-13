@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Solvifie Consultancy",
   },
   description:
-    "Chennai's leading Recruitment & HR Consultancy with 8+ years of expertise. Specialising in talent acquisition, executive hiring, contract staffing & workforce planning. 500+ successful placements across India.",
+    "Chennai's leading Recruitment & HR Consultancy with 4+ years of expertise. Specialising in talent acquisition, executive hiring, contract staffing & workforce planning. 500+ successful placements across India.",
   keywords: [
     "HR consultancy Chennai",
     "recruitment agency Chennai",
@@ -52,23 +52,13 @@ export const metadata: Metadata = {
     siteName: "Solvifie Consultancy",
     title: "Solvifie Consultancy | Building Teams. Powering Growth.",
     description:
-      "Chennai's leading Recruitment & HR Consultancy. Expert talent acquisition, executive hiring & workforce planning. 500+ placements. 8+ years of experience across India.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Solvifie Consultancy - Recruitment & HR Solutions in Chennai",
-        type: "image/png",
-      },
-    ],
+      "Chennai's leading Recruitment & HR Consultancy. Expert talent acquisition, executive hiring & workforce planning. 500+ placements. 4+ years of experience across India.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Solvifie Consultancy | Building Teams. Powering Growth.",
     description:
-      "Chennai's leading Recruitment & HR Consultancy. 500+ successful placements. 8+ years of expertise.",
-    images: ["/og-image.png"],
+      "Chennai's leading Recruitment & HR Consultancy. 500+ successful placements. 4+ years of expertise.",
   },
   robots: {
     index: true,
@@ -85,9 +75,9 @@ export const metadata: Metadata = {
     canonical: "https://solvifie.com",
   },
   icons: {
-    icon: "/logo.jpeg",
-    shortcut: "/logo.jpeg",
-    apple: "/logo.jpeg",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 

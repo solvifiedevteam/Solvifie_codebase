@@ -33,7 +33,7 @@ export default function AdminSidebar() {
       <div className="p-6 border-b border-gray-100">
         <Link href="/admin" className="flex items-center gap-3">
           <Image
-            src="/logo.jpeg"
+            src="/logo.png"
             alt="Solvifie"
             width={120}
             height={36}

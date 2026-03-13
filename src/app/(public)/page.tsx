@@ -48,7 +48,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "EmploymentAgency",
     name: "Solvifie Consultancy",
-    image: "https://solvifie.com/logo.jpeg",
+    image: "https://solvifie.com/logo.png",
     "@id": "https://solvifie.com/#organization",
     url: "https://solvifie.com",
     telephone: "+918248020159",
@@ -191,7 +191,7 @@ export default function Home() {
     url: "https://solvifie.com",
     name: "Solvifie Consultancy | Recruitment & HR Solutions in Chennai",
     description:
-      "Chennai's leading Recruitment & HR Consultancy with 8+ years of expertise in talent acquisition, executive hiring and workforce planning.",
+      "Chennai's leading Recruitment & HR Consultancy with 4+ years of expertise in talent acquisition, executive hiring and workforce planning.",
     isPartOf: { "@id": "https://solvifie.com/#website" },
     about: { "@id": "https://solvifie.com/#organization" },
     breadcrumb: {

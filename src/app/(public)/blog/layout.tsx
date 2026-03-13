@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: 'https://solvifie.com/blog',
     images: [
       {
-        url: '/og-image.png',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'Solvifie Consultancy HR & Recruitment Blog',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: 'HR & Recruitment Blog | Solvifie Consultancy',
     description:
       'Expert insights on hiring trends, career advice, and HR best practices.',
-    images: ['/og-image.png'],
+    images: ['/opengraph-image'],
   },
   alternates: {
     canonical: 'https://solvifie.com/blog',

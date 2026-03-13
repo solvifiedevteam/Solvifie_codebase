@@ -48,7 +48,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center group">
               <Image
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="Solvifie Logo"
                 width={36}
                 height={36}
@@ -151,7 +151,7 @@ const Navbar = () => {
               <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
                 <div className="flex items-center">
                   <Image
-                    src="/logo.jpeg"
+                    src="/logo.png"
                     alt="Solvifie Logo"
                     width={32}
                     height={32}

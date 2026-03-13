@@ -4,7 +4,7 @@ import ServicesContent from '@/components/ServicesContent';
 export const metadata: Metadata = {
   title: 'HR & Recruitment Services in Chennai | Solvifie Consultancy',
   description:
-    'Solvifie Consultancy offers talent acquisition, executive hiring, contract staffing, RPO, resume enhancement, and career consulting services in Chennai. 500+ placements. 8+ years of expertise.',
+    'Solvifie Consultancy offers talent acquisition, executive hiring, contract staffing, RPO, resume enhancement, and career consulting services in Chennai. 500+ placements. 4+ years of expertise.',
   keywords: [
     'recruitment services Chennai',
     'HR consulting services Chennai',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'Solvifie Consultancy Services — Recruitment & HR Solutions Chennai',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Recruitment & HR Services in Chennai | Solvifie Consultancy',
     description:
-      'Talent acquisition, executive hiring, contract staffing & career services. 500+ placements. 8+ years of expertise in Chennai.',
-    images: ['/og-image.png'],
+      'Talent acquisition, executive hiring, contract staffing & career services. 500+ placements. 4+ years of expertise in Chennai.',
+    images: ['/opengraph-image'],
   },
 };
 

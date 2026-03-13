@@ -12,7 +12,15 @@ const stats = [
     { icon: <Clock className="text-white" size={32} />, number: "48H", label: "Average Response Time", color: "bg-violet-600" },
 ];
 
-const StatCard = ({ icon, number, label, color, index }: any) => (
+interface StatCardProps {
+    icon: React.ReactNode;
+    number: string;
+    label: string;
+    color: string;
+    index: number;
+}
+
+const StatCard = ({ icon, number, label, color, index }: StatCardProps) => (
     <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -4,7 +4,7 @@ import AboutContent from '@/components/AboutContent';
 export const metadata: Metadata = {
   title: "About Solvifie Consultancy | Chennai's Trusted HR & Recruitment Firm",
   description:
-    "Discover Solvifie Consultancy — Chennai's premier recruitment & HR consulting firm with 8+ years of experience, 500+ successful placements, and partnerships with 200+ companies across India.",
+    "Discover Solvifie Consultancy — Chennai's premier recruitment & HR consulting firm with 4+ years of experience, 500+ successful placements, and partnerships with 200+ companies across India.",
   keywords: [
     'about Solvifie Consultancy',
     'HR consultancy Chennai history',
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     canonical: 'https://solvifie.com/about',
   },
   openGraph: {
-    title: 'About Solvifie Consultancy | 8+ Years of HR Excellence in Chennai',
+    title: 'About Solvifie Consultancy | 4+ years of HR Excellence in Chennai',
     description:
       "Meet the team behind Chennai's most trusted recruitment & HR consultancy. 500+ placements, 200+ client companies, and a proven process for finding the perfect fit.",
     url: 'https://solvifie.com/about',
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'About Solvifie Consultancy — Chennai HR & Recruitment Experts',
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Solvifie Consultancy | 8+ Years of HR Excellence',
+    title: 'About Solvifie Consultancy | 4+ years of HR Excellence',
     description:
-      '500+ placements. 200+ client companies. 8+ years of expertise. Learn the Solvifie story.',
-    images: ['/og-image.png'],
+      '500+ placements. 200+ client companies. 4+ years of expertise. Learn the Solvifie story.',
+    images: ['/opengraph-image'],
   },
 };
 
@@ -52,7 +52,7 @@ const organizationSchema = {
   url: 'https://solvifie.com',
   logo: 'https://solvifie.com/logo.png',
   description:
-    "Solvifie Consultancy is Chennai's leading Recruitment & HR Consulting firm specialising in talent acquisition, executive hiring, contract staffing, and workforce planning with 8+ years of experience and 500+ successful placements.",
+    "Solvifie Consultancy is Chennai's leading Recruitment & HR Consulting firm specialising in talent acquisition, executive hiring, contract staffing, and workforce planning with 4+ years of experience and 500+ successful placements.",
   foundingDate: '2016',
   areaServed: [
     { '@type': 'City', name: 'Chennai' },
@@ -105,7 +105,7 @@ const faqSchema = {
       name: 'What makes Solvifie Consultancy different from other recruitment firms in Chennai?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Solvifie combines deep local market expertise with global recruitment standards. We offer personalised solutions, rigorous cultural-fit assessments, and post-placement support — ensuring long-term success for both employers and candidates. Our consultants are industry veterans with 8+ years of hands-on experience in the Chennai market.',
+        text: 'Solvifie combines deep local market expertise with global recruitment standards. We offer personalised solutions, rigorous cultural-fit assessments, and post-placement support — ensuring long-term success for both employers and candidates. Our consultants are industry veterans with 4+ years of hands-on experience in the Chennai market.',
       },
     },
     {

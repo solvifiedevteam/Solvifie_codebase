@@ -95,7 +95,7 @@ const Footer = () => {
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
               <Image
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="Solvifie Logo"
                 width={40}
                 height={40}
