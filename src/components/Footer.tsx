@@ -222,7 +222,7 @@ const Footer = () => {
 
             <div className="mt-8 p-4 rounded-xl bg-white/4 border border-white/8">
               <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
-                8+ Years of Excellence
+                4+ Years of Excellence
               </p>
               <p className="text-sm text-gray-400">
                 Trusted by 500+ organisations across India.
