@@ -30,6 +30,7 @@ export async function generateMetadata({
   return {
     title: `${job.title} in ${job.location}`,
     description: desc,
+    keywords: [job.title, job.location, 'job opening', 'Solvifie Consultancy', 'careers'],
     alternates: { canonical: `https://solvifie.com/jobs/${slug}` },
     openGraph: {
       title: `${job.title} — ${job.location} | Solvifie Consultancy`,
@@ -44,6 +45,11 @@ export async function generateMetadata({
           alt: `${job.title} at Solvifie Consultancy`,
         },
       ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${job.title} in ${job.location} | Solvifie`,
+      description: desc,
     },
   };
 }
@@ -123,7 +129,7 @@ export default async function JobPage({
       '@type': 'Organization',
       name: 'Solvifie Consultancy',
       sameAs: 'https://solvifie.com',
-      logo: 'https://solvifie.com/Solvifie_logo1.png',
+      logo: 'https://solvifie.com/logo.jpeg',
     },
     ...(job.salary && {
       baseSalary: {

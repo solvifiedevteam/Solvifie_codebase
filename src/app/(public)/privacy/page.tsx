@@ -5,8 +5,21 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Solvifie Consultancy',
   description:
     'Privacy Policy of Solvifie Consultancy — how we collect, use, and protect your personal data when you use our recruitment and HR consulting services.',
+  keywords: ['privacy policy', 'Solvifie privacy', 'data protection recruitment'],
   alternates: {
     canonical: 'https://solvifie.com/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy | Solvifie Consultancy',
+    description:
+      'How Solvifie Consultancy collects, uses, and protects your personal data.',
+    url: 'https://solvifie.com/privacy',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Privacy Policy | Solvifie Consultancy',
+    description:
+      'How Solvifie Consultancy protects your personal data.',
   },
 };
 

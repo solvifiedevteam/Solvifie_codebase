@@ -32,6 +32,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Current Job Openings | Solvifie Consultancy',
+    description:
+      'Browse active job opportunities placed by Solvifie Consultancy. Full-time, contract, and executive roles across Chennai.',
+  },
 };
 
 export const dynamic = 'force-dynamic';

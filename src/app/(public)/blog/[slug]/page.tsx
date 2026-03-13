@@ -30,6 +30,7 @@ export async function generateMetadata({
   return {
     title: `${post.title} | Solvifie Blog`,
     description: post.excerpt,
+    keywords: [post.category, 'Solvifie blog', 'HR insights', 'recruitment tips'],
     alternates: {
       canonical: `https://solvifie.com/blog/${post.slug}`,
     },
@@ -47,6 +48,12 @@ export async function generateMetadata({
           alt: post.title,
         },
       ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
     },
   };
 }
@@ -79,7 +86,7 @@ export default async function BlogArticlePage({
       name: 'Solvifie Consultancy',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://solvifie.com/Solvifie_logo1.png',
+        url: 'https://solvifie.com/logo.jpeg',
       },
     },
     mainEntityOfPage: {

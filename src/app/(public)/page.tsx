@@ -13,8 +13,33 @@ export const metadata: Metadata = {
   title: "Solvifie Consultancy | Recruitment & HR Solutions in Chennai",
   description:
     "Solvifie — Hiring. Simplified. Delivered. A trusted recruitment partner delivering skilled, pre-screened candidates for IT & Non-IT roles, contract & permanent staffing, US recruitment, and bulk hiring. Serving businesses across India and globally.",
+  keywords: [
+    "recruitment agency Chennai",
+    "HR consultancy Chennai",
+    "staffing solutions India",
+    "IT recruitment Chennai",
+    "contract staffing",
+    "permanent staffing",
+    "US recruitment India",
+    "bulk hiring Chennai",
+    "Solvifie Consultancy",
+    "talent acquisition",
+  ],
   alternates: {
     canonical: "https://solvifie.com",
+  },
+  openGraph: {
+    title: "Solvifie Consultancy | Recruitment & HR Solutions in Chennai",
+    description:
+      "Hiring. Simplified. Delivered. Trusted recruitment partner for IT & Non-IT roles, contract & permanent staffing across India.",
+    url: "https://solvifie.com",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solvifie Consultancy | Recruitment & HR Solutions in Chennai",
+    description:
+      "Hiring. Simplified. Delivered. Trusted recruitment partner for IT & Non-IT roles across India.",
   },
 };
 

@@ -5,8 +5,21 @@ export const metadata: Metadata = {
   title: 'Terms of Service | Solvifie Consultancy',
   description:
     'Terms of Service for Solvifie Consultancy — the terms and conditions governing the use of our recruitment website and HR consulting services.',
+  keywords: ['terms of service', 'Solvifie terms', 'recruitment terms and conditions'],
   alternates: {
     canonical: 'https://solvifie.com/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service | Solvifie Consultancy',
+    description:
+      'Terms and conditions governing the use of Solvifie Consultancy recruitment and HR consulting services.',
+    url: 'https://solvifie.com/terms',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Terms of Service | Solvifie Consultancy',
+    description:
+      'Terms and conditions for Solvifie Consultancy services.',
   },
 };
 
