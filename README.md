@@ -21,7 +21,7 @@ Production-ready recruitment consultancy website for **Solvifie Consultancy, Che
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```
 src/
