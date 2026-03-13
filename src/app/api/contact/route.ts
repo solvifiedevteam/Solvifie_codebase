@@ -7,7 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 // In-memory rate limit: 5 messages per IP per hour (resets on cold start)
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
-export const _rateLimitMap = rateLimit; // exported for test resets only
+// not exported — Next.js route files only allow HTTP handler exports
 
 const ALLOWED_SERVICES = new Set([
   'Talent Acquisition',
