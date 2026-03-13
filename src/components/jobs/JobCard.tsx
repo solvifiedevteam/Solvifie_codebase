@@ -39,7 +39,7 @@ export default function JobCard({
               {job.title}
             </h3>
             <p className="text-lg text-gray-500 font-medium">
-              Solvifie Client
+              {job.client_name || 'Solvifie Client'}
             </p>
           </div>
           <span className="px-4 py-1 bg-blue-50 text-primary rounded-full text-sm font-bold uppercase tracking-wide shrink-0">
