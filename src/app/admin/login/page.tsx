@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
 import { Lock, Mail, Eye, EyeOff, AlertCircle } from 'lucide-react';
 import Image from 'next/image';
@@ -12,7 +11,6 @@ const MAX_ATTEMPTS = 5;
 const LOCKOUT_MS = 60 * 1000;
 
 export default function AdminLoginPage() {
-  const router = useRouter();
   const [formState, setFormState] = useState<FormState>('idle');
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -53,8 +51,7 @@ export default function AdminLoginPage() {
       return;
     }
 
-    router.push('/admin');
-    router.refresh();
+    window.location.href = '/admin';
   };
 
   return (
