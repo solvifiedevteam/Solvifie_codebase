@@ -5,7 +5,7 @@ import { createServerClient } from '@supabase/ssr';
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 
 export async function middleware(request: NextRequest) {
-  const response = NextResponse.next({ request });
+  let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -16,9 +16,12 @@ export async function middleware(request: NextRequest) {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) => {
-            response.cookies.set(name, value, options);
-          });
+          // Apply to request so downstream server components see updated cookies
+          cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
+          response = NextResponse.next({ request });
+          cookiesToSet.forEach(({ name, value, options }) =>
+            response.cookies.set(name, value, options)
+          );
         },
       },
     }
@@ -34,11 +37,10 @@ export async function middleware(request: NextRequest) {
     !request.nextUrl.pathname.startsWith('/admin/login')
   ) {
     if (!ADMIN_EMAIL || !user || user.email?.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
-      // Sign out non-admin users so they don't stay stuck
-      if (user && ADMIN_EMAIL && user.email?.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
-        await supabase.auth.signOut();
-      }
-      return NextResponse.redirect(new URL('/admin/login', request.url));
+      const redirectRes = NextResponse.redirect(new URL('/admin/login', request.url));
+      // Copy cookie updates (e.g. stale token clearing) onto the redirect response
+      response.cookies.getAll().forEach((cookie) => redirectRes.cookies.set(cookie));
+      return redirectRes;
     }
   }
 
