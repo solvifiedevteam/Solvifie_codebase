@@ -83,7 +83,7 @@ export default function AdminLoginPage() {
 
           <form onSubmit={handleSignIn} className="space-y-5">
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">
+              <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">
                 Email
               </label>
               <div className="relative">
@@ -92,7 +92,10 @@ export default function AdminLoginPage() {
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
                 />
                 <input
+                  id="email"
+                  name="email"
                   type="email"
+                  autoComplete="email"
                   required
                   value={form.email}
                   onChange={(e) =>
@@ -105,7 +108,7 @@ export default function AdminLoginPage() {
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">
+              <label htmlFor="password" className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">
                 Password
               </label>
               <div className="relative">
@@ -114,7 +117,10 @@ export default function AdminLoginPage() {
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
                 />
                 <input
+                  id="password"
+                  name="password"
                   type={showPassword ? 'text' : 'password'}
+                  autoComplete="current-password"
                   required
                   value={form.password}
                   onChange={(e) =>
