@@ -72,10 +72,9 @@ export default function AdminSidebar() {
       {/* Mobile top bar */}
       <header className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-100 h-14 flex items-center justify-between px-4 shadow-sm">
         <Link href="/admin" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Solvifie" width={90} height={28} />
-          <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
-            Admin
-          </span>
+          <Image src="/logo.png" alt="Solvifie" width={32} height={32} className="rounded-lg" />
+          <span className="text-sm font-bold text-gray-800 tracking-tight">Solvifie</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Admin</span>
         </Link>
         <button
           onClick={() => setMobileOpen(true)}
@@ -98,9 +97,10 @@ export default function AdminSidebar() {
               <Link
                 href="/admin"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-3"
+                className="flex items-center gap-2"
               >
-                <Image src="/logo.png" alt="Solvifie" width={100} height={30} />
+                <Image src="/logo.png" alt="Solvifie" width={36} height={36} className="rounded-lg" />
+                <span className="text-sm font-bold text-gray-800 tracking-tight">Solvifie</span>
               </Link>
               <button
                 onClick={() => setMobileOpen(false)}
@@ -120,11 +120,12 @@ export default function AdminSidebar() {
       <aside className="hidden lg:flex flex-col w-64 bg-white border-r border-gray-100 min-h-screen shrink-0">
         <div className="p-6 border-b border-gray-100">
           <Link href="/admin" className="flex items-center gap-3">
-            <Image src="/logo.png" alt="Solvifie" width={120} height={36} />
+            <Image src="/logo.png" alt="Solvifie" width={40} height={40} className="rounded-xl" />
+            <div>
+              <p className="text-sm font-bold text-gray-800 tracking-tight">Solvifie</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Admin Panel</p>
+            </div>
           </Link>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-2">
-            Admin Panel
-          </p>
         </div>
         {navLinks}
         {bottomLinks}
