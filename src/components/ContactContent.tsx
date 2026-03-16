@@ -618,7 +618,7 @@ export default function ContactContent() {
           >
             <iframe
               title="Solvifie Consultancy Office Location"
-              src="https://maps.google.com/maps?q=Venkata+Balaji+Apartment,+Ponniamman+Kovil+Street,+Aalapakkam,+Chennai+600116&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8877883735254!2d80.1644980775102!3d13.04281391330819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261f51f6a4cdb%3A0x29bf900113351836!2sVenkata%20Balaji%20Apartment!5e0!3m2!1sen!2sin!4v1773641700205!5m2!1sen!2sin"
               className="w-full h-full border-0 grayscale group-hover:grayscale-0 transition-all duration-700"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
