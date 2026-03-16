@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
 
     await resend.emails.send({
       from: 'Solvifie Website <jobs@solvifie.com>',
-      to: process.env.ADMIN_EMAIL!,
+      to: process.env.NOTIFICATION_EMAIL!,
       subject: `New Enquiry: ${escapeHtml(service)} — ${escapeHtml(name)}`,
       html: `
         <div style="font-family: 'Inter', sans-serif; max-width: 560px; margin: 0 auto; padding: 32px;">

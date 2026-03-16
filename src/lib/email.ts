@@ -11,7 +11,7 @@ export async function sendAdminNotification(data: {
 }) {
   return resend.emails.send({
     from: 'Solvifie Jobs <jobs@solvifie.com>',
-    to: process.env.ADMIN_EMAIL!,
+    to: process.env.NOTIFICATION_EMAIL!,
     subject: `New Application: ${escapeHtml(data.jobTitle)} — ${escapeHtml(data.name)}`,
     html: `
       <div style="font-family: 'Inter', sans-serif; max-width: 560px; margin: 0 auto; padding: 32px;">
