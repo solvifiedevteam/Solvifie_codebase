@@ -14,12 +14,12 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:",    // Next.js requires inline scripts + blob workers
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://www.googletagmanager.com",    // Next.js requires inline scripts + blob workers
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https://images.unsplash.com",
       "media-src 'self'",
-      "connect-src 'self' https://*.supabase.co",
+      "connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com",
       "frame-src 'self' https://www.google.com",
       "frame-ancestors 'self'",
       "base-uri 'self'",
